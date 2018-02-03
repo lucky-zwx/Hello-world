@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/clion programer/Eat/Changecode.c
+Hand.h
+D:/clion programer/Eat/Hand.h
+
+D:/clion programer/Eat/Hand.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+time.h
+-
+
+D:/clion programer/Eat/Kaorou.c
+Hand.h
+D:/clion programer/Eat/Hand.h
+
+D:/clion programer/Eat/Wanzhou.c
+Hand.h
+D:/clion programer/Eat/Hand.h
+
+D:/clion programer/Eat/main.c
+Hand.h
+D:/clion programer/Eat/Hand.h
+
