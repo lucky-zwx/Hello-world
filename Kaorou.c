@@ -20,8 +20,9 @@ int Kaorou (char poststr[])
     char sushehao[5]={0};
     char dianhua[12]={0};
     char yaoqiu[100]={0};
-    double sum;
-    sum = 1.0;
+    double sum=1.0;
+    time_t timep;
+    time (&timep);
     char QR[]="<img src=\"http://www.xiaoyuan666.com/images/1511877467620.jpg\" width=\"567px\" height=\"992px\">";
     printf("Content-Type:text/html;charset=GB2312\n\n");
     printf("<HTML>\n");
@@ -78,41 +79,21 @@ int Kaorou (char poststr[])
     }
 
     fputc('\n',fp);
-    fprintf(fp, "%s", kr1);
-    fprintf(fp,"%s","   ");
-    fprintf(fp, "%s", kr2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr3);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr4);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",number1);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr5);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr6);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",number2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",louhao);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",sushehao);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",dianhua);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",yaoqiu);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"需要支付：%.2f元",sum);
-    fprintf(fp,"%s","   ");
-    time_t timep;
-    time (&timep);
-    fprintf(fp,"%s",ctime(&timep));
-    fprintf(fp,"%s","   ");
-    fputs("<div></div>",fp);
+    fprintf(fp,"%s  ", kr1);
+    fprintf(fp,"%s  ", kr2);
+    fprintf(fp,"%s  ", kr3);
+    fprintf(fp,"%s  ", kr4);
+    fprintf(fp,"%s  ", number1);
+    fprintf(fp,"%s  ", kr5);
+    fprintf(fp,"%s  ", kr6);
+    fprintf(fp,"%s  ", number2);
+    fprintf(fp,"%s  ", name);
+    fprintf(fp,"%s  ", louhao);
+    fprintf(fp,"%s  ", sushehao);
+    fprintf(fp,"%s  ", dianhua);
+    fprintf(fp,"%s  ", name2);
+    fprintf(fp,"%s  ", yaoqiu);
+    fprintf(fp,"需要支付：%.2f元  订单时间：%s  <div></div>",sum,ctime(&timep));
     fclose(fp);
 
     printf ("%s",QR);                   //输出二维码

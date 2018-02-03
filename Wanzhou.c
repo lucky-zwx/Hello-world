@@ -66,29 +66,28 @@ int Wanzhou (char poststr[])
     }
 
     fputc('\n',fp);
-    fprintf(fp,"%s",wz1);
+    fprintf(fp,"面类：%s",wz1);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",wz2);
+    fprintf(fp,"面类：%s",wz2);
     fprintf(fp,"%s","   ");
     fprintf(fp,"%s",noodles);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name);
+    fprintf(fp,"姓名：%s",name);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",louhao);
+    fprintf(fp,"楼号：%s",louhao);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",sushehao);
+    fprintf(fp,"宿舍号：%s",sushehao);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",dianhua);
+    fprintf(fp,"电话：%s",dianhua);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name2);
+    fprintf(fp,"支付宝账号：%s",name2);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",yaoqiu);
+    fprintf(fp,"要求：%s",yaoqiu);
     fprintf(fp,"%s","   ");
     fprintf(fp,"需要支付：%d元",sum);
     fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",ctime(&timep));
-    fprintf(fp,"%s","   ");
-    fputs("<div></div>",fp);
+    fprintf(fp,"订单时间：%s",ctime(&timep));
+    fprintf(fp,"%s","   <div></div>");
     fclose(fp);
 
     printf ("%s",QR);                   //输出二维码
