@@ -19,6 +19,20 @@ int Wanzhou (char poststr[]);
 
 int Kaorou (char poststr[]);
 
+int Tujia  (char poststr[]);
+
+int Yipin (char poststr[]);
+
+int Smnoodles(char poststr[]);
+
+int Hundun(char poststr[]);
+
+int Yangrou(char poststr[]);
+
+int Egg(char poststr[]);
+
+int English(char poststr[]);
+
 char zhi[3];
 
 #endif //EAT_HAND_H

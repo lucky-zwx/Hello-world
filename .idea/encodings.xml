@@ -2,9 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Changecode.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Egg.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Hand.h" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Hundun.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Kaorou.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Smallnoodles.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Tujia.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/Wanzhou.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Yangr.c" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/Yipin.c" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/main.c" charset="GB2312" />
   </component>
 </project>

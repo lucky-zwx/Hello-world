@@ -6,24 +6,25 @@
 
 int Kaorou (char poststr[])
 {
-    char kr1[50]={0};
-    char kr2[50]={0};
-    char kr3[50]={0};
-    char kr4[50]={0};
-    char kr5[50]={0};
-    char kr6[50]={0};
-    char number1[50]={0};
-    char number2[50]={0};
-    char name[100]={0};
-    char name2[100]={0};
-    char louhao[5]={0};
-    char sushehao[5]={0};
-    char dianhua[12]={0};
-    char yaoqiu[100]={0};
-    double sum;
-    sum = 1.0;
+    char kr1[200]={0};
+    char kr2[200]={0};
+    char kr3[200]={0};
+    char kr4[200]={0};
+    char kr5[200]={0};
+    char kr6[200]={0};
+    char number1[200]={0};
+    char number2[200]={0};
+    char name[200]={0};
+    char name2[200]={0};
+    char louhao[200]={0};
+    char sushehao[200]={0};
+    char dianhua[200]={0};
+    char yaoqiu[9999]={0};
+    double sum=1.0;
+    time_t timep;
+    time (&timep);
     char QR[]="<img src=\"http://www.xiaoyuan666.com/images/1511877467620.jpg\" width=\"567px\" height=\"992px\">";
-    printf("Content-Type:text/html;charset=GB2312\n\n");
+    printf("Content-Type:text/html;charset=GBK\n\n");
     printf("<HTML>\n");
     printf("<HEAD>\n<TITLE >支付界面</TITLE>\n</HEAD>\n");
     printf("<BODY>\n");
@@ -60,6 +61,7 @@ int Kaorou (char poststr[])
     kr5[0]=' ';
     kr6[0]=' ';
 
+    printf("<div>（づ￣3￣）づ</div>");
     printf("<div>你的名字：%s</div>",name);
     printf("<div>你的支付宝账号：%s</div>",name2);
     printf("<div>你点的餐：%s %s %s </div>", kr1, kr2, kr3);
@@ -78,41 +80,22 @@ int Kaorou (char poststr[])
     }
 
     fputc('\n',fp);
-    fprintf(fp, "%s", kr1);
-    fprintf(fp,"%s","   ");
-    fprintf(fp, "%s", kr2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr3);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr4);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",number1);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr5);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",kr6);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",number2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",louhao);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",sushehao);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",dianhua);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",name2);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"%s",yaoqiu);
-    fprintf(fp,"%s","   ");
-    fprintf(fp,"需要支付：%.2f元",sum);
-    fprintf(fp,"%s","   ");
-    time_t timep;
-    time (&timep);
-    fprintf(fp,"%s",ctime(&timep));
-    fprintf(fp,"%s","   ");
-    fputs("<div></div>",fp);
+    fprintf(fp,"餐馆：烤肉拌饭  |");
+    fprintf(fp,"%s  |", kr1);
+    fprintf(fp,"%s  |", kr2);
+    fprintf(fp,"%s  |", kr3);
+    fprintf(fp,"%s  |", kr4);
+    fprintf(fp,"份数：%s  |", number1);
+    fprintf(fp,"%s  |", kr5);
+    fprintf(fp,"%s  |", kr6);
+    fprintf(fp,"份数：%s  |", number2);
+    fprintf(fp,"姓名：%s  |", name);
+    fprintf(fp,"楼号：%s  |", louhao);
+    fprintf(fp,"宿舍号：%s  |", sushehao);
+    fprintf(fp,"电话：%s  |", dianhua);
+    fprintf(fp,"支付宝账号：%s  |", name2);
+    fprintf(fp,"要求：%s  |", yaoqiu);
+    fprintf(fp,"需要支付：%.2f元  订单时间：%s  <div></div>",sum,ctime(&timep));
     fclose(fp);
 
     printf ("%s",QR);                   //输出二维码
